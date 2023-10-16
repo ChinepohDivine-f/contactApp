@@ -25,8 +25,8 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         themeMode: ThemeMode.system,
-        home: const ContactListPage(),
-        // home: const ContactCreatePage(),
+        // home: const ContactListPage(),
+        home: const ContactCreatePage(),
       ),
     );
   }

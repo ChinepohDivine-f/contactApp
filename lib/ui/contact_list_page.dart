@@ -44,7 +44,7 @@ class _ContactListPageState extends State<ContactListPage> {
           title: const Text("Contacts",
               style: TextStyle(
                 color: Colors.white,
-                  fontSize: 40,
+                  fontSize: 30,
                   fontWeight: FontWeight.w600))),
       body: ScopedModelDescendant<ContactModel>(
         builder: (context, child, model) {

@@ -4,7 +4,7 @@ import 'package:contactapp/data/contact.dart';
 import 'package:contactapp/ui/model/contact_model.dart';
 import 'package:flutter/material.dart';
 import 'package:faker/faker.dart' as faker;
-import 'package:contactapp/ui/widget/contact_list_tile.dart';
+import 'package:contactapp/ui/widget/contact_tile.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class ContactListPage extends StatefulWidget {
@@ -40,17 +40,21 @@ class _ContactListPageState extends State<ContactListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.black38,
+          backgroundColor: Colors.blueGrey,
           title: const Text("Contacts",
               style: TextStyle(
-                  fontSize: 20,
+                color: Colors.white,
+                  fontSize: 40,
                   fontWeight: FontWeight.w600))),
       body: ScopedModelDescendant<ContactModel>(
-        builder: (BuildContext context, Widget? child,
-            ContactModel model) {
+        builder: (context, child, model) {
           return ListView.builder(
               itemCount: model.contacts.length,
-              itemBuilder: (context, index) {});
+              itemBuilder: (context, index) {
+                return ContactTile(
+                  contactIndex: index,
+                );
+              });
         },
 
         // child: ListView.builder(
